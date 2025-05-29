@@ -86,7 +86,7 @@ const registerUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, createdUser, "User registered successfully"));
 });
 const publishAVideo = asyncHandler(async (req, res) => {
-console.log("reached at controller");
+  console.log("reached at controller");
 
   const { title, description } = req.body;
   // TODO: get video, upload to cloudinary, create video
