@@ -39,9 +39,13 @@ app.use(express.static("public"));
 
 // Routes
 import userRouter from "./route/user.route.js";
+import videoRouter from "./route/video.route.js";
+import tweetRouter from "./route/tweet.route.js";
 
 // Mount user routes under /api/v1/users
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/videos", videoRouter);
+app.use("/api/v1/tweets", tweetRouter);
 
 // Global error handler middleware
 app.use((err, req, res, next) => {
