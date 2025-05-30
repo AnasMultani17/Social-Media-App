@@ -43,6 +43,10 @@ import videoRouter from "./route/video.route.js";
 import tweetRouter from "./route/tweet.route.js";
 import subRouter from "./route/subscription.route.js";
 import playlistRouter from "./route/playlist.route.js";
+import likeRouter from "./route/like.route.js";
+import healthcheckRouter from "./route/healthcheck.route.js";
+import dashboardRouter from "./route/dashboard.route.js";
+import commentRouter from "./route/comment.route.js";
 
 // Mount user routes under /api/v1/users
 app.use("/api/v1/users", userRouter);
@@ -50,6 +54,10 @@ app.use("/api/v1/videos", videoRouter);
 app.use("/api/v1/tweets", tweetRouter);
 app.use("/api/v1/subscribe", subRouter);
 app.use("/api/v1/playlist", playlistRouter);
+app.use("/api/v1/like", likeRouter);
+app.use("/api/v1/healthcheck", healthcheckRouter);
+app.use("/api/v1/comment", commentRouter);
+app.use("/api/v1/dashboard", dashboardRouter);
 // Global error handler middleware
 app.use((err, req, res, next) => {
   console.error("ERROR:", err); // Log error details in the server console
